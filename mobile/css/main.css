@@ -1,0 +1,977 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('normalize.css');
+@import url('reset.css');
+
+/* -------------------- LAYOUT -------------------- */
+body {
+    height: 100vh;      
+    scrollbar-width: none;
+    -ms-overflow-style: none;    
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+html, body {
+    overflow-x: hidden; 
+}
+.flex {
+    display: flex;    
+}
+.column {
+    flex-direction: column;
+}
+.jcsb {
+    justify-content: space-between;    
+}
+.aic {
+    align-items: center;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding: 60px 7%;
+}
+:root {
+    --product-bg:rgba(204,204,204,.1);
+    --description_tt:#999;
+}
+.hidden {
+    display: none;
+}
+/* -------------------- 폰트위계 -------------------- */
+/* font-family: 'Noto Sans KR', sans-serif; */
+/* font-family: 'Poppins', sans-serif; */
+body{
+    font:14px/1 'Noto Sans KR', sans-serif;    
+    font-weight: 300;
+    color: #333;    
+}
+h1,h2,h3,h4,h5,h6{
+    line-height: 1;
+}
+.eng {
+    font-family: 'Poppins', sans-serif;;
+}
+.main_tt {
+    font-size: 30px;
+}
+.main_tt.eng {
+    font-size: 36px;
+}
+.sub_tt {
+    font-size: 28px;    
+}
+.con_head_tt {
+    font-size: 24px;    
+}
+.con_head_tt.eng {
+    font-size: 20px;
+}
+.con_sub_tt {
+    font-size: 18px;    
+}
+.body_em {
+    font-size: 16px;
+}
+.slide .model1, .slide .model2, .slide .model3 {
+    position: relative;
+    height: 560px;
+}
+.model1:after, .model2:after, .model3:after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to top, rgba(0,0,0,.5) 50%, rgba(255,255,255,.0));
+    left: 0; right: 0;
+    top: 50%; bottom: 0;  
+}
+.model1:before, .model2:before, .model3:before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(0,0,0,.5) 40%, rgba(255,255,255,.0));;
+    left: 0; right: 0;
+    top: 0; bottom: 80%;    
+}
+.slide .model1 {  
+    background: url(../images/headphone_model3.jpg) 68% 0 / 400% no-repeat;
+}
+.slide .model2 {  
+    background: url(../images/earphone_model.jpg) 50% 10% / 200% no-repeat;    
+}
+.slide .model3 {  
+    background: url(../images/headphone_model4.jpg) 30% / cover no-repeat;
+}
+.slick-dots {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.txt_Box {
+    color: #fff;
+    position: absolute;    
+    bottom: 80px;
+    left: 30px;    
+    z-index: 100;
+}
+.txt_Box .main_tt {
+    margin-top: 10px;
+    line-height: 40px;
+}
+.slick-dots li {
+    text-indent: -9999em;
+    width: 20px;
+    height: 2px;
+    background: #999;    
+}
+.slick-dots li.slick-active{
+    background: #fff;
+}
+header {    
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px;
+    position: fixed;
+    z-index: 2;       
+}
+header.active {
+    background: rgba(0,0,0,.2);    
+}
+header h1 a {
+    width: 30px;
+    height: 30px;
+    background: url(../images/audio_logo_bi_white.png) 0 0 / 100% no-repeat; 
+    text-indent: -9999em;
+    display: inline-block;
+}
+header.black h1 a {
+    background: url(../images/audio_logo_bi.png) 0 0 / 100% no-repeat; 
+}
+header.black .flex span {
+    color: #000;
+}
+header .flex {
+    gap: 15px;
+}
+header .flex span {
+    font-size: 30px;
+    color: #fff;
+}
+.best_product .main_tt, .new_product > .main_tt {
+    font-weight: 200;
+    line-height: 40px;
+    margin-bottom: 40px;
+}
+.best_product .main_tt strong, .new_product .main_tt strong, .about strong{
+    font-weight: 700;
+}
+.best_product .bset_box {
+    width: 100%;
+    gap: 40px 7%;
+    flex-wrap: wrap;
+}
+.best_product .bset_box .product_box {
+    width: 46.5%;    
+}
+.best_product .bset_box .product_box a {    
+    color: #333;
+}
+.product_box .product_img {
+    width: 100%;
+    height: 162px;  
+    background-repeat: no-repeat;
+    background-color: var(--product-bg);
+    background-size: 85%;
+    background-position: center;
+    margin-bottom: 10px;
+}
+.product_box .headphone {
+    background-image: url(../images/best_prodcut1.png);
+}
+.product_box .table {
+    background-image: url(../images/best_prodcut2.png);
+}
+.product_box .earphone {
+    background-image: url(../images/best_prodcut3.png);
+}
+.product_box .bluetooth {
+    background-image: url(../images/best_prodcut4.png);
+}
+.product_box .body_em {
+    margin-bottom: 10px;
+}
+.product_box strong {
+    font-weight: 700;
+}
+.new_product {
+    background: rgba(240,232,222,.5);
+}
+.new_product h2.main_tt.eng  {
+    text-align: right;
+    margin-bottom: 100px;
+}
+.new_itemBox.headphone {
+    margin-bottom: 60px;
+}
+.new_itemBox .new_headphone {      
+    position: relative;
+    margin-bottom: 60px;
+    height: 177px;
+    width: 100%;
+    background: url(../images/product3.png) 80% 75% / 135% no-repeat;
+}
+.new_itemBox .new_headphone::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 90%;
+    left: -10%;
+    top: -40%;
+    background: #8E5152;
+    z-index: -1;
+}
+.new_itemBox .new_headphone h3,.new_itemBox .new_table h3 {
+    position: absolute;
+    color: #000;
+    bottom: -25px;
+}
+.new_itemBox .main_tt {
+    font-weight: 500;    
+}
+.new_itemBox .con_sub_tt {
+    margin-bottom: 20px;
+    color: #000;
+}
+.new_itemBox p {
+    line-height: 28px;
+    color: var(--description_tt);
+    margin-bottom: 40px;
+}
+.new_itemBox a { 
+    color: #000;
+    text-align: right;
+    display: block;
+}
+.new_itemBox span, .about span, .overview span{
+    font-size: 16px;
+    vertical-align: top;
+    margin-left: 10px;
+}
+.new_itemBox .new_table {      
+    position: relative;
+    margin-bottom: 60px;
+    height: 177px;
+    width: 100%;
+    background: url(../images/at_lpw40wn.jpg) 80% 75% / 135% no-repeat;
+}
+.new_itemBox .new_table::after {
+    content: '';
+    position: absolute;
+    height: 100px;    
+    width: 200%;
+    left: -10%;
+    top: 0%;
+    background: #D5B397;
+    z-index: -1;
+}
+.about {
+    background: #4B4453;
+    color: #fff;
+}
+.about h2 {
+    margin-bottom: 20px;
+}
+.about h3 {
+    margin-bottom: 30px;
+    line-height: 24px;
+}
+.about a {
+    color: #fff;
+    display: block;
+}
+.about .about_box {
+    margin-top: 40px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.about .about_box div {
+    width: 50%;
+    height: 140px;
+}
+.about .about_box .about_box1 {
+    background: url(../images/earphone_model2.jpg) 80% center / cover no-repeat;
+}
+.about .about_box .about_box2 {
+    background: url(../images/ath220_7.jpg) 70% center / cover no-repeat;
+}
+.about .about_box .about_box3 {
+    background: url(../images/ath220.jpg) center top / 180% no-repeat;
+}
+footer {
+    background: #333;
+    padding: 60px 0;
+    color: #666;
+    text-align: center;
+    font-size: 12px;
+    line-height: 22px;
+}
+footer h2 {
+    background: url(../images/audio_logo_white.png);
+    background-size: 100%;    
+    width: 174px;
+    height: 32px;
+    text-indent: -9999em;
+    margin: 0 auto;
+    margin-bottom: 20px;    
+}
+.gotop {
+    display: none;
+    position: fixed;
+    right: 7%;
+    bottom: 30px;
+    background: #fff;    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #333;
+    box-shadow: 0 0 3px 0 rgba(51, 51, 51, .3);        
+}
+.gotop span {
+    font-size: 36px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);    
+}
+.toggle {    
+    left:-100%; top: 0; right: 100%; bottom: 0;
+    background: #333;
+    position: fixed;   
+    z-index: 100; 
+    padding: 30px 4vh;
+    box-sizing: border-box;    
+    color: #fff;     
+    transition: 1s;  
+}
+.toggle.active {
+    color: #333;
+    background: #fff;
+}
+.toggle.active a, .toggle.active .toggle_header span,
+.toggle.active .member_menu span, .toggle.active .menu_list span {
+    color: #333;
+}
+.toggle a {
+    color: #fff;    
+}
+.toggle .toggle_header {
+    margin-bottom: 5.4vh;
+}
+.toggle .toggle_header span {
+    color: #fff;
+    font-size: 3.75vh;
+}
+.toggle h2 {
+    font-size: 4vh;
+    line-height: 5.6vh;
+    display: inline-block;    
+    margin-right: 30px;
+    margin-bottom: 4vh;
+}
+.toggle h3 {
+    font-size: 3.2vh;
+}
+.toggle h2 + span {
+    line-height: 5.6vh;
+    vertical-align: baseline;
+}
+.member_menu {
+    padding: 0 30px;
+    margin-bottom: 6.8vh;
+}
+.member_menu a {
+    text-align: center;
+}
+.member_menu span {
+    font-size: 5.6vh;
+    color: rgba(153, 153, 153, .2);
+    margin-bottom: 1.3vh;
+}
+.member_menu .line {
+    width: 1px;
+    height: 4vh;
+    background: rgba(153, 153, 153, .2);
+}
+.toggle .menu_list {
+    gap: 3vh;
+}
+.toggle .menu_list span {
+    color: #999;    
+}
+.buyNow {
+    opacity: 1;    
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    color: #fff;
+    padding: 20px 30px;
+    z-index: 5;
+}
+.buyNow a, .buyNow a:visited {
+    color: #fff !important;
+}
+.buyNow h2 {
+    width: 100%;
+    text-align: center;
+}
+.buyNow .line {
+    width: 1px;
+    height: 20px;
+    background: #fff;
+    margin-left: 20px;
+}
+.detail_product .detail_image {
+    height: 474px;
+    width: 100%;    
+    background-color: #c3c3c3;
+    background-image: url(../images/product1.png);
+    background-position: center center;
+    background-size: 100% ;
+    background-repeat: no-repeat;
+    margin-bottom: 40px;
+}
+.detail_product .detail_description {
+    padding: 0 30px;    
+    position: relative;
+}
+.detail_description .body_em {
+    margin-bottom: 10px;
+    color: #B2B2B2;
+}
+.detail_description .detail_price {
+    margin-top: 40px;
+    font-size: 20px;
+}
+.detail_description .detail_price strong {
+    font-size: 30px;
+    font-weight: 700;
+    margin-right: 3px;
+}
+.detail_product .detail_color {
+    position: absolute;
+    gap: 10px;
+    bottom: 0;
+    right: 30px;
+}
+.detail_product .detail_color div {
+    cursor: pointer;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 1px solid #c4c4c4;
+}
+.detail_product .detail_color .black {
+    background: #000;
+}
+.detail_product .detail_color .blue {
+    background: #5040B0;
+}
+.detail_product .detail_color .white {
+    background: #fff;
+}
+.overview_model {
+    height: 353px;
+    width: 100%;
+    background: url(../images/ath220_4.jpg) 35% 10% / 190% no-repeat;
+    margin-bottom: 40px;
+}
+.overview .description, .keepgoing .description {
+    line-height: 28px;
+    color: var(--description_tt);
+}
+.overview p:first-of-type, .keepgoing p:first-of-type, .nolags_txtbox p:first-of-type{
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.overview h2, .keepgoing h2, .nolags h2 {
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.keepgoing {
+    background: rgba(146, 146, 146, 0.1);
+}
+.keepgoing_model {
+    height: 353px;
+    width: 100%;
+    background: url(../images/ath220_5.jpg) 35% 10% / 165% no-repeat;
+    margin-bottom: 40px;
+}
+.icon > div {
+    flex-wrap: wrap;
+    gap: 40px 0;
+}
+.icon > div > div {
+    width: 50%;     
+    align-items: center; 
+}
+.icon .flex.column div{
+    background: url(../images/sprite2x.png) no-repeat 0 50% / 424.5px 94.8px;   
+    margin-bottom: 20px;
+}
+.icon .mic_img {
+    width: 85.1px;
+    height: 95px;
+}
+.icon .battery_img {
+    width: 94.1px;
+    height: 95px;
+    background-position-x: -105px !important;
+}
+.icon .feather_img {
+    width: 91.5px;
+    height: 95px;
+    background-position-x: -333px !important;
+}
+.icon .onear_img {
+    width: 94.4px;
+    height: 95px;
+    background-position-x: -219px !important;
+}
+.nolags {
+    width: 100vw;
+    height: 600px;
+    position: relative;
+    background: url(../images/product3.png) 45% 93% / 340% no-repeat;
+}
+.nolags_txtbox {
+    position: absolute;
+    bottom: 60px;
+    padding: 0 7%;
+}
+.nolags .description {
+    line-height: 28px;
+    color: #fff;
+}
+.specifications h2 {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.specifications .flex {
+    position: relative;
+    padding: 20px 0;
+    border-top: 1px solid #e3e3e3;
+    align-items: flex-start;
+}
+.specifications .flex div {
+    font-weight: 400;    
+    line-height: 24px;
+}
+.specifications .flex div > p {
+    display: none;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--description_tt);
+}
+.specifications .flex div > p.active {
+    display: block;
+}
+.specifications .flex div > p:first-child {
+    padding-top: 20px;
+}
+.specifications .flex span {
+    font-size: 24px;
+    color: var(--description_tt);
+}
+.specifications .flex:last-child {
+    border-bottom: 1px solid #e3e3e3;
+}
+/*product*/
+.product_main {
+    text-align: center;
+    margin-top: 60px;
+    font-weight: normal;
+}
+.button_group {
+    margin-top: 50px;    
+    color: var(--description_tt);
+    font-weight: 400; 
+    gap: 0;   
+}
+.button_group p {
+    cursor: pointer;
+}
+.button_group .button.is-checked {
+    color: #333;
+    font-weight: 500;
+}
+.view_control {
+    margin: 20px 0;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.view_control > div {
+    height: 16px;
+    cursor: pointer;
+}
+.view_control .thumbnail {   
+    height: 16px; 
+    width: 20px; 
+    background: #c4c4c4;   
+}
+.view_control .list > div {
+    height: 7px;
+    width: 20px;
+    background: #c4c4c4;   
+}
+.grid {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 40px 7%;
+}
+.grid > div {
+    width: 46.5%; 
+    position: relative;  
+}
+.grid a {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    text-indent: -9999rem;
+}
+.grid .flex {
+    width: 100%;
+    background-color: rgba(204, 204, 204, .1);
+    padding: 0 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.grid .flex .product_img {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    margin-bottom: 0;    
+}
+.grid .product_img {     
+    height: 162px;    
+    margin-bottom: 10px;
+    background-color: rgba(204, 204, 204, .1);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+.grid .headphone .product_img {
+    background-image: url(../images/best_prodcut1.png);
+}
+.grid .table .product_img {
+    background-image: url(../images/best_prodcut2.png);
+}
+.grid .earphone .product_img {
+    background-image: url(../images/best_prodcut3.png);
+}
+.grid .bluetooth .product_img {
+    background-image: url(../images/best_prodcut4.png);
+}
+.grid .headphone_second .product_img {
+    background-image: url(../images/best_prodcut7.png);
+}
+.grid .table_second .product_img {
+    background-image: url(../images/best_prodcut8.png);
+}
+.grid .earphone_second .product_img {
+    background-image: url(../images/best_prodcut6.png);
+}
+.grid .bluetooth_second .product_img {
+    background-image: url(../images/best_prodcut5.png);
+}
+.grid .body_em.eng {
+    margin-bottom: 10px;
+}
+.grid strong {
+    font-weight: 500;
+}
+
+.simple-pagination ul {
+    margin-top: 40px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.simple-pagination li a {
+    color: #999;
+}
+.simple-pagination li {
+	color: #999;	
+	text-decoration: none;		
+    font-size: 16px; 
+    font-weight: 400;   
+    line-height: 24px;
+}
+.simple-pagination .material-icons-outlined {
+    font-size: 24px;
+    vertical-align: top;        
+}
+.simple-pagination .current {
+	color: #000;    
+}
+.signform {
+    margin: 60px 0;
+}
+.loginform {
+    margin: 60px 0 40px;
+}
+.signform .field label, .signform .field input, 
+.loginform .field label, .loginform .field input {
+    width: 100%;
+}
+.signform .field label, .loginform .field label {
+    color: #000;
+    position: relative;    
+}
+.signform .field label::after, .loginform .field label::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #ff0000;
+    top: 50%;
+    right: -8px;   
+    transform: translateY(-50%);
+}
+.signform .field input, .signform .login_field input, 
+.loginform .field input, .loginform .login_field input {
+    margin: 10px 0 40px;
+    padding: 10px 20px;
+    border: 1px solid var(--description_tt);
+    box-sizing: border-box;
+}
+.signform .field:last-of-type input:first-of-type {
+    margin: 10px 0 0;
+}
+.signform .field:last-of-type input:last-of-type {
+    margin: 0 0 60px;
+    border-top: none;
+}
+.signform .field input::placeholder {
+    font-size: 16px;
+    color: #c4c4c4;
+    font-weight: 200;
+}
+.signform button, .loginform button {
+    width: 100%;
+    padding: 20px 0;
+    font-size: 16px;
+    color: #fff;
+    background: #000;
+}
+.signform .login {
+    margin-top: 20px;
+}
+main > div {
+    justify-content: center;
+    gap: 20px;
+}
+main > div .vertical_bar {
+    width: 1px;
+    height: 14px;
+    background: var(--description_tt);
+}
+main > div a {
+    color: #000;
+}
+.cartform {
+    margin-top: 60px;
+}
+.cartform .check_all {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--description_tt);
+    margin-bottom: 40px;
+}
+.cartform .check_all .flex {
+    gap: 10px;
+}
+.cartform .check_all p {
+    color: var(--description_tt);
+}
+.cartform .check_all .flex label {
+    color: #000;
+}
+.check_self .second_floor {
+    margin-bottom: 20px;
+}
+.check_self .second_floor label {
+    display: none;
+}
+.check_self .second_floor span {
+    color: var(--description_tt);
+    font-size: 16px;    
+    vertical-align: middle;
+}
+.check_self .first_floor {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #000;
+}
+.check_self .first_floor > div {
+    gap: 20px;
+    color: #000;
+}
+.check_self .first_floor > div strong {
+    font-weight: 600;
+}
+.check_self .first_floor > div .count_box {
+    width: 88px;
+    height: 30px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--description_tt);
+}
+.check_self .first_floor > div .count_box span {
+    font-size: 16px;
+    color: var(--description_tt);
+}
+.check_self .first_floor .product_cart {
+    width: 100px;
+    height: 100px;
+    background: url(../images/best_prodcut4.png) center center / 100% no-repeat;
+}
+.cash {
+    text-align: right;
+    margin-bottom: 60px;
+}
+.cash p {
+    color: #000;
+    margin-bottom: 10px;
+}
+.cash h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;;
+}
+.cash h3 strong {
+    font-size: 30px;
+    font-weight: 600;
+}
+.cash small {
+    color: var(--description_tt);
+    line-height: 20px;
+}
+.select_btt div p {    
+    width: 48.8%;  
+    text-align: center;
+}
+.select_btt div p a {
+    display: block;
+    padding: 20px 0;
+}
+.select_btt div p:first-child {
+    border: 1px solid #000;    
+}
+.select_btt div p:last-child {
+    background: #000;
+}
+.select_btt div p:first-child a {
+   color: #000;
+}
+.select_btt div p:last-child a {
+    color: #fff;
+ }
+.serch_modal {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1000;    
+}
+.serch_modal.show {
+    display: initial;
+}
+.serch_modal .close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 28px;
+}
+.serch_modal form{    
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+}
+.serch_modal form input {
+    background: none;
+    border-bottom: 2px solid #333;      
+    font-size: 16px;
+}
+.toggle form input {
+    display: none;
+    background: none;
+    
+    border-bottom: 1px solid #fff;      
+    font-size: 16px;
+    color: #fff;
+}
+.toggle form input.active {
+    display: initial;
+}
+.serch_modal form input:focus, .toggle form input:focus {
+    outline: none;
+}
+.serch_modal form button {
+    background: none;
+    color: #333;             
+}
+.serch_modal form button span {
+    vertical-align: text-bottom;
+    font-size: 28px;
+}
+.toggleBox {
+    justify-content: end;
+}
+.toggleBox .switch {    
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 16px;
+}
+.toggleBox .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.toggleBox .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;    
+    transition: .4s;
+    border-radius: 10px;
+}
+
+.toggleBox .slider:before {
+    position: absolute;
+    content: '';
+    height: 16px;
+    width: 16px;     
+    background-color: #999;    
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.toggleBox input:checked + .slider {
+    background-color: #b2b2b2;
+}
+
+.toggleBox input:checked + .slider:before {
+    background-color: #eee;
+    transform: translateX(24px);
+}

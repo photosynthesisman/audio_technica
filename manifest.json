@@ -1,0 +1,44 @@
+{
+  "display_override": ["window-controls-overlay"],
+  "protocol_handlers": [{ "protocol": "mailto", "url": "/newEmail?to=%s" }],
+  "name": "audio_technica : test",
+  "short_name": "AUDIO TECHNICA",
+  "start_url": "https://photosynthesisman.github.io/audio_technica/",
+  "display": "standalone",
+  "description": "오디오테크니카 연습 페이지",
+  "lang": "kor",
+  "dir": "auto",
+  "theme_color": "#4244e2",
+  "background_color": "#4244e2",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "../mobile/images/logo512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "../mobile/images/logo192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://www.pwabuilder.com/assets/screenshots/screen1.png",
+      "sizes": "2880x1800",
+      "type": "image/png",
+      "description": "A screenshot of the home page"
+    }
+  ],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "AUDIO_TECHNICA",
+      "url": "https://photosynthesisman.github.io/audio_technica/",
+      "description": "오디오테크니카 연습 페이지"
+    }
+  ]
+}

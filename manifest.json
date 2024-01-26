@@ -6,7 +6,7 @@
   "start_url": "./",
   "display": "standalone",
   "description": "오디오테크니카 연습 페이지",
-  "lang": "kor",
+  "lang": "ko",
   "dir": "auto",
   "theme_color": "#42444e",
   "background_color": "#42444e",

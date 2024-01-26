@@ -27,6 +27,39 @@
       "purpose": "any"
     }
   ],
+  "favicon": [
+    {
+      "src": "mobile/images/favicon/android-icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "images/images/favicon/android-icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "images/images/favicon/android-icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "images/images/favicon/apple-icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "images/images/favicon/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+
+    {
+      "src": "mobile/images/logo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
   "screenshots": [
     {
       "src": "https://www.pwabuilder.com/assets/screenshots/screen1.png",

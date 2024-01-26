@@ -38,7 +38,13 @@
     {
       "name": "AUDIO_TECHNICA",
       "url": "https://photosynthesisman.github.io/audio_technica/",
-      "description": "오디오테크니카 연습 페이지"
+      "description": "오디오테크니카 연습 페이지",
+      "icons": [
+        {
+          "src": "mobile/images/logo192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }

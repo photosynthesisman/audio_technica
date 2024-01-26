@@ -3,7 +3,7 @@
   "protocol_handlers": [{ "protocol": "mailto", "url": "/newEmail?to=%s" }],
   "name": "audio_technica : test",
   "short_name": "AUDIO TECHNICA",
-  "start_url": "https://photosynthesisman.github.io/audio_technica/",
+  "start_url": "/",
   "display": "standalone",
   "description": "오디오테크니카 연습 페이지",
   "lang": "kor",
